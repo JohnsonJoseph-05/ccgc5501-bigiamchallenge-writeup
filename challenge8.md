@@ -1,4 +1,5 @@
 Challenge Overview
+
 This challenge involved retrieving a sensitive secret in AWS Systems Manager (SSM) and AWS Secrets Manager to receive a flag. Participants began with a pre-established IAM user, ctf-starting-user, which had been granted access by three targeted IAM policies. The challenge was not only regarding the technical aspects of retrieving secrets but also about having a clear comprehension of AWS permissions and using CloudFox efficiently.
 
 Challenge Setup and Key Components:
@@ -39,5 +40,6 @@ The challenge was addressed by adopting a systematic, step-by-step approach—fr
 One of the most significant aspects of the challenge was understanding and leveraging the IAM policies. Breaking down and validating permissions using CloudFox proved to be crucial in establishing ctf-starting-user had requisite access permission.
 
 Conclusion:
+
 The Cloudfoaxiblode "Its A Secret" challenge was a great illustration of how careful IAM permission management, combined with the wise use of AWS tools like CloudFox, can give secure access to valuable secrets. The methodical approach taken in this exercise not only enabled successful flag retrieval but also provided valuable lessons in cloud environment security through the exercise of least privilege, constant monitoring, and secure access practices.
 
