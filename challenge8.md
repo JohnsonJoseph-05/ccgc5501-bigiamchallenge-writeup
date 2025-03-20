@@ -1,5 +1,4 @@
 Challenge Overview
-
 This challenge involved retrieving a sensitive secret in AWS Systems Manager (SSM) and AWS Secrets Manager to receive a flag. Participants began with a pre-established IAM user, ctf-starting-user, which had been granted access by three targeted IAM policies. The challenge was not only regarding the technical aspects of retrieving secrets but also about having a clear comprehension of AWS permissions and using CloudFox efficiently.
 
 Challenge Setup and Key Components:
