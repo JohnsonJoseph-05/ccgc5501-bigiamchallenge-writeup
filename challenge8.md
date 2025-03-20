@@ -18,13 +18,13 @@ The process commenced by confirming the identity of the active user via the AWS 
  
 aws --profile cloudfoxable sts get-caller-identity
 
-3.	Secret Enumeration:
+2.	Secret Enumeration:
 CloudFox was employed to list the secrets within the AWS account:
 
 cloudfox aws -p cloudfoxable secrets -v2
 This command identified several secrets, including the target secret: /cloudfoxable/flag/its-a-secret.
 
-5.	Secret Retrieval:
+3.	Secret Retrieval:
 The next step involved accessing the secret from SSM using the following AWS CLI
 
 aws --profile cloudfoxable --region us-west-2 ssm get-parameter --with-decryption --name /cloudfoxable/flag/its-a-secret
@@ -33,7 +33,7 @@ The execution of this command successfully returned the flag:
 
 FLAG{ItsASecret::IsASecretASecretIfTooManyPeopleHaveAccessToIt?}
 
-7.	Permission Analysis:
+4.	Permission Analysis:
 To ensure that the permissions were correctly configured, CloudFox was used to examine the IAM permissions of ctf-starting-user:
 
 cloudfox aws -p cloudfoxable permissions --principal ctf-starting-user -v2
