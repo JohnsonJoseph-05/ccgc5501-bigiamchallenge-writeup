@@ -1,3 +1,5 @@
+**Challenge 5: Backwards**
+
 **Challenge Statement**
 
 The main goal of this challenge was to retrieve a secret from AWS Systems Manager (SSM) by assuming an IAM role with the right permissions. It focused on understanding AWS IAM roles, trust policies, and how to access protected secrets
@@ -22,13 +24,14 @@ But this attempt failed because the non-root user did not have the required perm
 
 **Steps-2** - Modified the Trust Relationship
 
-**Steps-3** - Assumed Role Access: After updating the trust policy, I successfully assumed the "Alexander-Arnold" role by executing the following command: 
+**Steps-3** - Assumed Role Access: After updating the trust policy, I successfully assumed the "Alexander-Arnold" role by executing the command: 
 
   aws sts assume-role --role-arn arn:aws:iam::307946660251:role/Alexander-Arnold --role-session-name Alexander-Arnold
   
 This gave temporary security credentials.
 
 **Steps-4** - Secret Retrieval: With the correct permissions in place, I used the AWS CLI to retrieve the secret stored in AWS Systems Manager (SSM) by running: 
+
  aws secretsmanager get-secret-value --secret-id DomainAdministrator-Credentials --region us-west-2 --profile assumed-role
  
 This returned the secret: **FLAG{backwards::IfYouFindSomethingInterstingFindWhoHasAccessToIt}**
