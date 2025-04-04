@@ -11,8 +11,11 @@ This challenge focused on working with IAM roles, permissions, and AWS CLI. The 
 **Key Tasks**:
 
 Role Assumption: The non-root user initially lacked permission to assume the role.
+
 Policy Update: I modified the trust policy to allow the non-root user access.
+
 Secret Retrieval: Used AWS CLI to fetch the secret from AWS SSM.
+
 
 **Steps Taken to Solve the Challenge**
 
