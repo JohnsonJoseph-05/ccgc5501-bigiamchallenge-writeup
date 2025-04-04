@@ -34,7 +34,8 @@ This gave temporary security credentials.
 
  aws secretsmanager get-secret-value --secret-id DomainAdministrator-Credentials --region us-west-2 --profile assumed-role
  
-This returned the secret: **FLAG{backwards::IfYouFindSomethingInterstingFindWhoHasAccessToIt}**
+This returned the secret: 
+    FLAG{backwards::IfYouFindSomethingInterstingFindWhoHasAccessToIt}
 
 **Steps-5** - I reviewed the permissions linked to the "Alexander-Arnold" role and confirmed that it had the necessary access to retrieve the secret. The attached policies were properly configured and matched the challenge requirements.
 
